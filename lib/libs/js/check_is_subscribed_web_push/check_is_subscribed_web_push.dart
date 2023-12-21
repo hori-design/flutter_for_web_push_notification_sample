@@ -1,0 +1,2 @@
+export 'package:flutter_for_web_push_notification_sample/libs/js/check_is_subscribed_web_push/check_is_subscribed_web_push_none.dart'
+  if (dart.library.html) 'package:package:flutter_for_web_push_notification_sample/libs/js/check_is_subscribed_web_push/check_is_subscribed_web_push_html.dart';

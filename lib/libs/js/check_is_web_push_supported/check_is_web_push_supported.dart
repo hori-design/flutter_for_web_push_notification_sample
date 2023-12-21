@@ -1,0 +1,2 @@
+export 'package:flutter_for_web_push_notification_sample/libs/js/check_is_web_push_supported/check_is_web_push_supported_none.dart'
+  if (dart.library.html) 'package:flutter_for_web_push_notification_sample/libs/js/check_is_web_push_supported/check_is_web_push_supported_html.dart';
