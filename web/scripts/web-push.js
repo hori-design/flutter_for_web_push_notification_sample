@@ -18,7 +18,7 @@ async function checkIsSubscribedWebPush() {
   return subscription != null
 }
 
-async function subscribeWebPush(validPublicKey) {
+async function subscribeWebPush(vapidPublicKey) {
   const RESPONSE_CODE = Object.freeze({
     SUCCEED: 'SUCCEED',
     NOT_SUPPORTED: 'NOT_SUPPORTED',
@@ -52,7 +52,7 @@ async function subscribeWebPush(validPublicKey) {
     .then(worker => worker.pushManager
       .subscribe({
         userVisibleOnly: true,
-        applicationServerKey: validPublicKey,
+        applicationServerKey: vapidPublicKey,
       })
     )
   const { endpoint, keys } = subscription.toJSON();
