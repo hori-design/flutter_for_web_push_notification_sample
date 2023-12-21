@@ -32,12 +32,13 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
+            appRunner.runApp()
+          })
         }
-      });
+      })
 
-      navigator.serviceWorker.register("/scripts/service-worker.js");
+      if (!('serviceWorker' in navigator)) return
+      navigator.serviceWorker.register("/scripts/service-worker.js")
     });
   </script>
 </body>
